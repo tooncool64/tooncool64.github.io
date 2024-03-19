@@ -51,6 +51,26 @@ function buyHuman() {
     document.getElementById('humanCost').innerHTML = nextCost3;
 };
 
+function buyFarm() {
+    var farmCost = Math.floor(1000000 * Math.pow(1.0, game.farms));
+    if (game.clicks >= farmCost) {
+        game.farms = game.farms + 1;
+        game.clicks = game.clicks - farmCost;
+        document.getElementById('farms').innerHTML = game.farms;
+        document.getElementById('clicks').innerHTML = game.clicks;
+    };
+    var nextCost4 = Math.floor(10000 * Math.pow(1.0, game.farms));
+    document.getElementById('farmCost').innerHTML = nextCost4;
+};
+
+function upgradeHumans(number) {
+    if (game.farms >= 1) {
+        game.humans += number;
+        document.getElementById('humans').innerHTML = game.humans;
+        document.getElementById('farms').innerHTML = game.farms;
+    };
+};
+
 function upgradeMacros(number) {
     if (game.mouses >= 1) {
         game.macros += number;
@@ -80,6 +100,10 @@ function deleteSave() {
 };
 
 function gameLoop() {
+    return upgradeHumans(game.humans);
+};
+
+function gameLoop() {
     return upgradeMacros(game.mouses);
 };
 
@@ -94,3 +118,4 @@ function gameLoop3() {
 setInterval(gameLoop, 1000);
 setInterval(gameLoop2, 1000);
 setInterval(gameLoop3, 1000);
+setInterval(gameLoop4, 1000)
