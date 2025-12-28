@@ -30,7 +30,7 @@ body {
 }
 
 .marquee {
-    width: 450px;
+    width: max-content;
     line-height: 50px;
     white-space: nowrap;
     overflow: hidden;
