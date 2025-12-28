@@ -72,3 +72,10 @@ body {
 
     image-rendering: pixelated;
 }
+
+.proj-box {
+    border: 4px double #44cc88;
+    padding: 10px;
+    margin: 20px;
+    background: #000020;
+}
