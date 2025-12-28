@@ -88,6 +88,13 @@ body {
     padding: 2px;
 }
 
+.proj-header2 {
+    background: #44cc88;
+    color: #f0f8ff;
+    padding: 2px;
+    font-size: 12px;
+}
+
 .pc98-center {
     text-align: center;
 }
