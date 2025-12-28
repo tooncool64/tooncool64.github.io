@@ -93,6 +93,6 @@ body {
 }
 
 .netscape-btn:hover {
-    background: #d0d0d0;  /* slightly brighter gray */
-    color: #004000;        /* subtle dark green text */
+    background: #d0d0d0;
+    color: #004000;
 }
