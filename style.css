@@ -1,0 +1,12 @@
+body {
+    background-color: #000;
+    background-image: radial-gradient(#222 25%, transparent 25%),
+    radial-gradient(#222 25%, transparent 25%);
+    background-position: 0 0, 2px 2px;
+    background-size: 4px 4px;
+    color: #00ff00;
+}
+
+@font-face {
+    src: url("resources/pc-9900-v2.otf") format("opentype");
+}
