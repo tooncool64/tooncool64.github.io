@@ -79,3 +79,8 @@ body {
     margin: 20px;
     background: #000020;
 }
+.proj-header {
+    background: #000070;
+    color: #f0f8ff;
+    padding: 2px;
+}
