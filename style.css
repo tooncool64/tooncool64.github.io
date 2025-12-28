@@ -66,9 +66,14 @@ body {
     padding: 10px 12px;
     line-height: 1.4;
 
-    font-family: "PC-9800", "MS Gothic", "Courier New", monospace;
+    font-family: "PC9900", "MS Gothic", "Courier New", monospace;
     text-shadow:
             0 0 2px rgba(0, 255, 102, 0.6);
 
     image-rendering: pixelated;
+}
+
+.image {
+    width: 50%;
+    height: 50%;
 }
