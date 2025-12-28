@@ -73,7 +73,7 @@ body {
     image-rendering: pixelated;
 }
 
-.image {
-    width: 50%;
-    height: 50%;
+.half-size {
+    transform: scale(0.5);
+    transform-origin: top left;
 }
