@@ -48,7 +48,7 @@ body {
 
 .pc98-paragraph {
     background-color: #000000;
-    color: #00ff66;
+    color: #b8ffd0;
 
     background-image:
             linear-gradient(
@@ -58,7 +58,7 @@ body {
             );
     background-size: 2px 2px;
 
-    border: 2px solid #00aa44;
+    border: 2px solid #44aa77;
     box-shadow:
             inset 1px 1px 0 #44ff88,
             inset -1px -1px 0 #004422;
@@ -67,9 +67,7 @@ body {
     line-height: 1.4;
 
     font-family: "PC9900", "MS Gothic", "Courier New", monospace;
-    text-shadow:
-            0 0 2px rgba(0, 255, 102, 0.6);
-
+    text-shadow: 0 0 2px rgba(120, 255, 180, 0.35);
     image-rendering: pixelated;
 }
 
