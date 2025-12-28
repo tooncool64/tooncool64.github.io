@@ -39,7 +39,7 @@ body {
 .marquee p {
     display: inline-block;
     padding-left: 120%;
-    animation: marquee 28s steps(90, end) infinite;
+    animation: marquee 28s steps(60, end) infinite;
 }
 
 @keyframes marquee {
@@ -47,7 +47,7 @@ body {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-220%);
+        transform: translateX(-160%);
     }
 }
 
