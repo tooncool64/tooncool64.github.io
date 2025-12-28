@@ -4,13 +4,13 @@
 }
 
 body {
-    background-color: #000;
+    background-color: #000018;
     background-image:
             radial-gradient(#222 25%, transparent 25%),
             radial-gradient(#222 25%, transparent 25%);
     background-position: 0 0, 2px 2px;
     background-size: 4px 4px;
-    color: #00ff00;
+    color: #c8ffd8;
     font-family: "PC9900", monospace;
 }
 
@@ -46,7 +46,7 @@ body {
     100% { transform: translate(-100%, 0); }
 }
 
-.pc98-paragraph {/
+.pc98-paragraph {
     background-color: #000000;
     color: #00ff66;
 
