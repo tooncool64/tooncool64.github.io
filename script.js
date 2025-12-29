@@ -5,15 +5,15 @@ const mainContent = document.getElementById('main-content');
 document.body.classList.add('no-scroll');
 
 const logs = [
-    { text: "INITIALIZING MDALLY_OS v1.2...", type: "log-info" },
+    { text: "INITIALIZING PROJECT_OS v1.2...", type: "log-info" },
     { text: "LOAD_MAPPED_DRIVE: C:\\PORTFOLIO\\PROJECTS.EXE", type: "log-info" },
-    { text: "ST. MARTIN'S UNIV. CREDENTIALS VERIFIED: BACHELOR'S DEGREE", type: "log-done" },
+    { text: "ST. MARTIN'S UNIV. CREDENTIALS VERIFIED", type: "log-done" },
     { text: "GPA: 3.94 / 4.00", type: "log-done" },
     { text: "BACKEND_SERVICES: ONLINE", type: "log-info" },
     { text: "CLOUD_INFRASTRUCTURE: CONNECTED", type: "log-info" },
     { text: "DECODING HUMAN_INTERFACE_MODULE...", type: "log-warn" },
     { text: "SYSTEM_READY_FOR_INTERVIEW.", type: "log-done" },
-    { text: "CVE-183974A HAS NOT BEEN PATCHED IN THIS BUILD", type: "log-error"},
+    { text: "CVE-1337420-A HAS NOT BEEN PATCHED IN THIS BUILD", type: "log-error"},
     { text: "PRESS ANY KEY TO BOOT GUI...", type: "log-done" }
 ];
 
