@@ -14,7 +14,6 @@ const logs = [
     { text: "DECODING HUMAN_INTERFACE_MODULE...", type: "log-warn" },
     { text: "SYSTEM_READY_FOR_INTERVIEW.", type: "log-done" },
     { text: "CVE-1337420-A HAS NOT BEEN PATCHED IN THIS BUILD", type: "log-error"},
-    { text: "PRESS ANY KEY TO BOOT GUI...", type: "log-done" }
 ];
 
 async function runBootSequence() {
@@ -31,7 +30,7 @@ async function runBootSequence() {
 
     const clickMessage = document.createElement('p');
     clickMessage.className = 'log-info';
-    clickMessage.innerText = "> CLICK ANYWHERE TO CONTINUE...";
+    clickMessage.innerText = "> PRESS ANY KEY TO BOOT GUI...";
     consoleOutput.appendChild(clickMessage);
 
     document.addEventListener('click', onUserClick);
