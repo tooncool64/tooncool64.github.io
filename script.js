@@ -60,7 +60,6 @@ document.getElementById('resume-button').addEventListener('click', function() {
     const progressCont = document.getElementById('progress-container');
     const progressFill = document.getElementById('progress-fill');
 
-    // UI Feedback
     this.style.opacity = '0.5';
     this.style.pointerEvents = 'none';
     btnText.innerText = "REQUESTING...";
@@ -76,7 +75,6 @@ document.getElementById('resume-button').addEventListener('click', function() {
             link.download = 'Micah_Dally_Resume.pdf';
             link.click();
 
-            // Reset
             btnText.innerText = "DOWNLOAD COMPLETE";
             setTimeout(() => {
                 btnText.innerText = "GET_RESUME.EXE";
