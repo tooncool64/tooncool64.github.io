@@ -54,3 +54,40 @@ function revealSite() {
 }
 
 document.addEventListener('DOMContentLoaded', runBootSequence);
+
+document.getElementById('resume-button').addEventListener('click', function() {
+    const btnText = this.querySelector('.btn-text');
+    const progressCont = document.getElementById('progress-container');
+    const progressFill = document.getElementById('progress-fill');
+
+    // UI Feedback
+    this.style.opacity = '0.5';
+    this.style.pointerEvents = 'none';
+    btnText.innerText = "REQUESTING...";
+    progressCont.style.display = 'block';
+
+    let width = 0;
+    const interval = setInterval(() => {
+        if (width >= 100) {
+            clearInterval(interval);
+
+            const link = document.createElement('a');
+            link.href = 'resources/my_resume.pdf';
+            link.download = 'Micah_Dally_Resume.pdf';
+            link.click();
+
+            // Reset
+            btnText.innerText = "DOWNLOAD COMPLETE";
+            setTimeout(() => {
+                btnText.innerText = "GET_RESUME.EXE";
+                this.style.opacity = '1';
+                this.style.pointerEvents = 'auto';
+                progressCont.style.display = 'none';
+                progressFill.style.width = '0%';
+            }, 2000);
+        } else {
+            width += 10;
+            progressFill.style.width = width + '%';
+        }
+    }, 100);
+});
