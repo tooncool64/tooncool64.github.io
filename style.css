@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 @font-face {
     font-family: "PC9900";
     src: url("resources/pc-9900-v2.otf") format("opentype");
@@ -102,4 +106,20 @@ body {
 .netscape-btn:hover {
     background: #d0d0d0;
     color: #004000;
+}
+
+.proj-box:hover {
+    border-color: #ffffff;
+    box-shadow: 0 0 10px #44cc88;
+    transition: 0.3s;
+}
+
+.nav-bar {
+    background: #b8b8b8;
+    border-bottom: 2px solid #707070;
+    padding: 5px;
+    color: #000080;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
