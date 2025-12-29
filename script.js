@@ -28,7 +28,17 @@ async function runBootSequence() {
         await new Promise(resolve => setTimeout(resolve, delay));
     }
 
-    setTimeout(revealSite, 1000);
+    const clickMessage = document.createElement('p');
+    clickMessage.className = 'log-info';
+    clickMessage.innerText = "> CLICK ANYWHERE TO CONTINUE...";
+    consoleOutput.appendChild(clickMessage);
+
+    document.addEventListener('click', onUserClick);
+}
+
+function onUserClick() {
+    document.removeEventListener('click', onUserClick);
+    revealSite();
 }
 
 function revealSite() {
