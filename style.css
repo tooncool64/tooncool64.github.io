@@ -125,16 +125,19 @@ body {
 }
 
 #boot-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     background-color: #000;
     color: #00ff00;
     font-family: "PC9900", monospace;
-    padding: 20px;
-    font-size: 14px;
-    line-height: 1.2;
-    min-height: 200px;
-    border-bottom: 4px double #00ff00;
-    margin-bottom: 20px;
-    text-shadow: 0 0 5px #00ff00;
+    padding: 40px;
+    box-sizing: border-box;
+    z-index: 9999;
+    overflow: hidden;
+    transition: opacity 1s ease-out;
 }
 
 .log-info { color: #00ff00; }
@@ -151,4 +154,17 @@ body {
 @keyframes blink {
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
+}
+
+#main-content {
+    opacity: 0;
+    transition: opacity 2s ease-in;
+}
+
+#main-content.visible {
+    opacity: 1;
+}
+
+body.no-scroll {
+    overflow: hidden;
 }
