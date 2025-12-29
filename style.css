@@ -185,3 +185,31 @@ body::after {
     background-size: 100% 3px, 3px 100%;
     pointer-events: none;
 }
+
+.section-header {
+    display: block;
+    background-color: #000040;
+    color: #44ff88;
+    padding: 6px 15px;
+    margin: 40px 20px 10px 20px;
+    font-size: 16px;
+    border-left: 6px solid #44ff88;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    border-bottom: 2px solid #44ff88;
+    box-shadow: 0 4px 0px -2px #000018, 0 6px 0px -2px #44ff88;
+}
+
+.section-header::before {
+    content: "C:\\>";
+    margin-right: 10px;
+    color: #c8ffd8;
+    opacity: 0.7;
+}
+
+.section-header::after {
+    content: "_";
+    animation: blink 0.8s infinite;
+    margin-left: 5px;
+}
