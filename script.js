@@ -1,14 +1,23 @@
 const consoleOutput = document.getElementById('console-output');
 const bootScreen = document.getElementById('boot-screen');
 const mainContent = document.getElementById('main-content');
-const skipBtn = document.getElementById('skip-boot'); // New
 
-let isSkipped = false;
+document.body.classList.add('no-scroll');
+
+const logs = [
+    { text: "INITIALIZING PROJECT_OS v1.2...", type: "log-info" },
+    { text: "LOAD_MAPPED_DRIVE: C:\\PORTFOLIO\\PROJECTS.EXE", type: "log-info" },
+    { text: "ST. MARTIN'S UNIV. CREDENTIALS VERIFIED", type: "log-done" },
+    { text: "GPA: 3.94 / 4.00", type: "log-done" },
+    { text: "BACKEND_SERVICES: ONLINE", type: "log-info" },
+    { text: "CLOUD_INFRASTRUCTURE: CONNECTED", type: "log-info" },
+    { text: "DECODING HUMAN_INTERFACE_MODULE...", type: "log-warn" },
+    { text: "SYSTEM_READY_FOR_INTERVIEW.", type: "log-done" },
+    { text: "CVE-1337420-A HAS NOT BEEN PATCHED IN THIS BUILD", type: "log-error"},
+];
 
 async function runBootSequence() {
     for (const log of logs) {
-        if (isSkipped) return;
-
         const p = document.createElement('p');
         p.className = log.type;
         p.style.margin = "0 0 5px 0";
@@ -19,34 +28,28 @@ async function runBootSequence() {
         await new Promise(resolve => setTimeout(resolve, delay));
     }
 
-    if (!isSkipped) {
-        const clickMessage = document.createElement('p');
-        clickMessage.className = 'log-info';
-        clickMessage.innerText = "> PRESS ANY KEY TO BOOT GUI...";
-        consoleOutput.appendChild(clickMessage);
-        document.addEventListener('click', onUserClick);
-    }
+    const clickMessage = document.createElement('p');
+    clickMessage.className = 'log-info';
+    clickMessage.innerText = "> PRESS ANY KEY TO BOOT GUI...";
+    consoleOutput.appendChild(clickMessage);
+
+    document.addEventListener('click', onUserClick);
+}
+
+function onUserClick() {
+    document.removeEventListener('click', onUserClick);
+    revealSite();
 }
 
 function revealSite() {
-    isSkipped = true; // Stop the sequence loop
     bootScreen.style.opacity = '0';
+
     mainContent.classList.add('visible');
 
     setTimeout(() => {
         bootScreen.style.display = 'none';
         document.body.classList.remove('no-scroll');
     }, 1000);
-}
-
-skipBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    revealSite();
-});
-
-function onUserClick() {
-    document.removeEventListener('click', onUserClick);
-    revealSite();
 }
 
 document.addEventListener('DOMContentLoaded', runBootSequence);
