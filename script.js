@@ -24,8 +24,8 @@ async function runBootSequence() {
         const delay = Math.floor(Math.random() * 400) + 100;
         await new Promise(resolve => setTimeout(resolve, delay));
 
-        window.scrollTo(0, 0);
+        window.scrollTo(0, document.body.scrollHeight);
     }
 }
 
-runBootSequence();
+document.addEventListener('DOMContentLoaded', runBootSequence);
