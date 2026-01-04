@@ -233,7 +233,6 @@ body::after {
             inset 1px 1px 0 #44ff88,
             3px 3px 0 #000000;
 
-    image-rendering: pixelated;
     background-color: #000;
     padding: 2px;
 }
