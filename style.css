@@ -246,3 +246,7 @@ body::after {
 .pc98-paragraph > a {
     color: #76d998
 }
+
+.proj-box > .section-header {
+    color: #44ff88
+}
