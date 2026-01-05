@@ -242,3 +242,7 @@ body::after {
     box-shadow: 0 0 8px #44cc88;
     transition: 0.2s;
 }
+
+.pc98-paragraph > a {
+    color: #76d998
+}
