@@ -35,7 +35,13 @@
         <div class="proj-box">
             <h2 class="proj-header">PROJ_01: AGAMA-Toolkit</h2>
             <h2 class="proj-header2">[Python | Backend | Data Science] <img src="resources/python_logo.png" alt="Python Logo" width="18" height="18"/></h2>
-            <p>TODO</p>
+            <div class="proj-screenshot-row">
+                <img src="resources/port1_img2.PNG" alt="Project 2 Homepage"/>
+                <img src="resources/port1_img1.PNG" alt="Project 2 Admin Page"/>
+            </div>
+            <p>I developed a high-performance computational toolkit centered on the AGAMA stellar dynamics library to simulate and analyze the orbital evolution of stellar clusters. The backend architecture leverages AGAMA’s orbit integration engine to model cluster trajectories within complex, rotating galactic potentials, utilizing particle spray algorithms to simulate tidal shedding events across gigayear timescales. To ensure a responsive user experience when handling massive datasets, I implemented a robust pre-computation pipeline that processes and stores millions of data points across multiple coordinate frames, including inertial Cartesian (x, y, z) and observational sky coordinates (RA, Dec, Proper Motion). This pipeline transforms raw phase-space vectors into standardized formats, facilitating the rapid analysis of tidal stream evolution without the overhead of real-time physics calculations.</p>
+
+            <p>The toolkit’s frontend is anchored by an Interactive Simulation Viewer built with Matplotlib, featuring a custom GUI for temporal scrubbing, playback, and frame-by-frame navigation. I integrated advanced diagnostic capabilities, including interactive 3D Plotly visualizations, dynamic density heatmaps, and a Kinematic Comparison Tool designed to quantify spatial and velocity correlations between simulated debris and empirical catalogs like APOGEE. A key technical feature is the "particle tracking" system, which allow users to select and "follow" individual particles to monitor their age and observable properties in real-time. By utilizing these interactive elements, the toolkit provides a comprehensive environment for cross-matching simulation data with real-world spectroscopic observations to identify potential cluster progenitors.</p>
         </div>
 
         <div class="proj-box">
